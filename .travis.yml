@@ -11,7 +11,6 @@ install:
  - npm install
 script:
  - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
- - npm run build
 after_success:
  - git remote add upstream "https://${GH_TOKEN}@github.com/${GH_REPO}.git"
  - npm version patch -m "[ci skip] version bumped %s"
@@ -19,11 +18,12 @@ after_success:
  - git add .
  - git commit -m "[ci skip] version ok"
  - git push upstream HEAD:master
+ - npm run build:app
  - rm -r src
  - rm -r resources
  - rm -r coverage
  - rm -r node_modules
- - rm www/.gitignore
+ - cp www/* .
 deploy:
   provider: pages
   skip-cleanup: true
