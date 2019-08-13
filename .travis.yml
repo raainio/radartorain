@@ -27,7 +27,8 @@ deploy:
   github-token: $GH_TOKEN
   keep-history: true
   on:
-    tags: true
+    #tags: true
+    branch: master
 env:
   global:
     - GH_REPO: "raainio/radartorain"
