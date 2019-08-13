@@ -1,0 +1,75 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Login
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-card class="welcome-card">
+        <!-- TODO Login (resources, ico, login...) -->
+        <ion-img src="/assets/login.png"></ion-img>
+        <ion-card-header>
+            <ion-card-title>Radar To Rain</ion-card-title>
+            <ion-card-subtitle>
+                <pre>in demo mode (release is in progress)</pre>
+                <ul>
+                    <li>Manage your Radar data.</li>
+                    <li>Manage AI computing and Machine learning.</li>
+                    <li>Manage your final Rain information.</li>
+                    <li>As team administrator, manage your team access.</li>
+                </ul>
+            </ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+            <form #heroForm="ngForm">
+                <ion-item>
+                    <ion-input
+                            type="email" placeholder="valid.email@required.com" required
+                                [(ngModel)]="userLoginEmail" name="userLoginEmail"
+                            pattern=".{1,}@[_a-z0-9A-Z]+(\.[a-z0-9A-Z]+)+"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-input type="password" placeholder="password"
+                               [(ngModel)]="userLoginPassword" name="userLoginPassword"
+                               required></ion-input>
+                </ion-item>
+                <!-- TODO https://github.com/raainio/web/LEGACY.md -->
+                <pre><small>Radar To Rain is using an <a href="https://fidj.ovh">OVH Fidji service</a> that take care of RGPD concerns.<br>Your <a href="https://github.com/raainio/web/LEGACY.md">personal or corporate information management</a> is important for us!</small></pre>
+
+                <div style="padding-top:20px">
+
+                    <ion-button expand="block" size="large"
+                                (click)="login(userLoginEmail, userLoginPassword)"
+                                [disabled]="!userLoginEmail || !heroForm.form.valid || !userLoginPassword">Login</ion-button>
+
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col class="ion-text-center">
+                                <a href="https://fidj.ovh/forgot"
+                                   target="_blank">
+                                    Forgot your login/password ?</a>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <a  (click)="loginAsDemo()">
+                                    Test as a demo user
+                                </a>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+
+
+                </div>
+            </form>
+        </ion-card-content>
+    </ion-card>
+
+
+    <span style="float:right;font-size:10px;">version: {{appVersion}}</span>
+
+</ion-content>

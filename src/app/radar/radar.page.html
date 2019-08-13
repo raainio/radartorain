@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Radar
+        </ion-title>
+    </ion-toolbar>
+    <div [hidden]="!refreshInProgress">
+        <ion-progress-bar type="indeterminate"></ion-progress-bar>
+    </div>
+</ion-header>
+
+<ion-content>
+
+    <ion-card class="welcome-card">
+        <ion-card-header>
+            <ion-card-subtitle>You are in a demo mode. Please contact our <a href="mailto:sales@radartorain.com">sales
+                team
+                @radartorain</a> to go further.
+            </ion-card-subtitle>
+        </ion-card-header>
+        <ion-img src="/assets/r2r_radar_anim.png"></ion-img>
+        <ion-card-content>
+            <p>Manage  your radar information here.<br>And if you are administrator, add Radar instances.</p>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button>
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+</ion-content>

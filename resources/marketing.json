@@ -1,0 +1,19 @@
+{
+  "marketing": [
+    {
+      "text": "Add Intelligence",
+      "landscape": "resources/marketing-01-ipad.png",
+      "portrait": "resources/marketing-01-iphone.png"
+    },
+    {
+      "text": "RadarToRain Bot",
+      "landscape": "resources/marketing-02-ipad.png",
+      "portrait": "resources/marketing-02-iphone.png"
+    },
+    {
+      "text": "Free account",
+      "landscape": "resources/marketing-03-ipad.png",
+      "portrait": "resources/marketing-03-iphone.png"
+    }
+  ]
+}

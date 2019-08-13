@@ -1,0 +1,39 @@
+<ion-content padding>
+
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>Connect your RadarToRain instance</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+
+            <form #heroForm="ngForm">
+                <ion-item>
+                    <ion-input type="url" placeholder="https://RadarToRain.you/RadarToRain" required
+                               [(ngModel)]="RadarToRainUrl" name="RadarToRainUrl"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-input type="string" placeholder="User" required
+                               [(ngModel)]="RadarToRainUser" name="RadarToRainUser"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-input type="password" placeholder="Password" required
+                               [(ngModel)]="RadarToRainPwd" name="RadarToRainPwd"></ion-input>
+                </ion-item>
+                <div>
+                    <ion-button expand="block"
+                                (click)="add(RadarToRainUrl, RadarToRainUser, RadarToRainPwd)"
+                                [disabled]="!RadarToRainUrl || !heroForm.form.valid">Login
+                    </ion-button>
+                    <ion-button expand="block"
+                                (click)="dismiss()">dismiss
+                    </ion-button>
+
+
+                </div>
+            </form>
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>
+
+

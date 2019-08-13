@@ -1,0 +1,36 @@
+language:
+  - node_js
+node_js:
+   - 11
+branches:
+  only:
+    - master
+install:
+ - git config remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
+ - git fetch --tags --depth=10000
+ - npm install
+script:
+ - npm test
+ - npm run build
+after_success:
+ - git remote add upstream "https://${GH_TOKEN}@github.com/${GH_REPO}.git"
+ - npm version patch -m "[ci skip] version bumped %s"
+ - npm run build:config
+ - git add .
+ - git commit -m "[ci skip] version ok"
+ - git push upstream HEAD:master
+ - rm -r src
+ - rm -r resources
+ - rm -r coverage
+ - rm -r node_modules
+ - rm www/.gitignore
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GH_TOKEN
+  keep-history: true
+  on:
+    branch: master
+env:
+  global:
+    - GH_REPO: "raainio/radartorain"
