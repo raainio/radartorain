@@ -20,7 +20,7 @@ we use RGPD Fidj system hosted in OVH (Europe Cloud), please use Login/ Password
 
 If you're not in our customer database, only a demo overview is available.
 
-Please contact sale support team : sales@raain.io (**TODO**)
+Please contact sale support team : sales@radartorain.com
 
 
 ### Manage your radar information
