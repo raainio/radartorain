@@ -19,18 +19,15 @@ after_success:
  - git commit -m "[ci skip] version ok"
  - git push upstream HEAD:master
  - npm run build:app
- - rm -r src
- - rm -r resources
- - rm -r coverage
- - rm -r node_modules
- - cp www/* .
 deploy:
+  local_dir: www
   provider: pages
   skip-cleanup: true
   github-token: $GH_TOKEN
   keep-history: true
   on:
     branch: master
+    tags: true
 env:
   global:
     - GH_REPO: "raainio/radartorain"

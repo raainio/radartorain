@@ -15,6 +15,9 @@ gulp
     .on('end', function () {
 
         app.use(express.static(__dirname + '/www'));
+        app.get('*', (request, response) => {
+            response.sendFile(__dirname+ '/www/index.html');
+        });
         var server = app.listen(port, function () {
             console.log('Listening on port %d', server.address().port);
         });
