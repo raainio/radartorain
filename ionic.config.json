@@ -1,7 +1,0 @@
-{
-  "name": "RadarToRain-bot-sidemenu",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "angular"
-}
