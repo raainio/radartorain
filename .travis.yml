@@ -11,7 +11,7 @@ install:
  - git fetch --tags --depth=10000
  - npm install
 script:
- - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
+ - npm run test -- --watch=false  --code-coverage --browsers=ChromeHeadlessNoSandbox
 after_success:
  - git remote add upstream "https://${GH_TOKEN}@github.com/${GH_REPO}.git"
  - npm version patch -m "[ci skip] version bumped %s"

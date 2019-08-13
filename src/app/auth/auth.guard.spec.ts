@@ -1,23 +1,19 @@
-import { TestBed, async, inject } from '@angular/core/testing';
+import {TestBed, async, inject} from '@angular/core/testing';
 
-import { AuthGuard } from './auth.guard';
+import {AuthGuard} from './auth.guard';
+import {FidjService} from "fidj";
 
 describe('AuthGuard', () => {
 
-
-  it('TODO', async () => {
-    expect(true).toBeTruthy();
-  });
-  /*
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      providers: [AuthGuard]
+    beforeEach(() => {
+        TestBed.configureTestingModule({
+            providers: [AuthGuard,
+                FidjService]
+        });
     });
-  });
 
-  it('should ...', inject([AuthGuard], (guard: AuthGuard) => {
-    expect(guard).toBeTruthy();
-  }));
+    it('should ...', inject([AuthGuard], (guard: AuthGuard) => {
+        expect(guard).toBeTruthy();
+    }));
 
-   */
 });

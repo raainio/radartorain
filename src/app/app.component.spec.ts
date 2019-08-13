@@ -13,12 +13,10 @@ import {Profile} from "./shared/profile.service";
 import {Storage} from "./shared/storage.service";
 
 describe('AppComponent', () => {
-  it('TODO', async () => {
-    expect(true).toBeTruthy();
-  });
-  /*
+
     let statusBarSpy, splashScreenSpy, platformReadySpy, platformSpy, networkSpy;
 
+    /*
     beforeEach(async(() => {
         statusBarSpy = jasmine.createSpyObj('StatusBar', ['styleDefault']);
         splashScreenSpy = jasmine.createSpyObj('SplashScreen', ['hide']);
@@ -73,6 +71,5 @@ describe('AppComponent', () => {
         expect(menuItems.length).toEqual(2);
         expect(menuItems[0].getAttribute('ng-reflect-router-link')).toEqual('/home');
         expect(menuItems[1].getAttribute('ng-reflect-router-link')).toEqual('/list');
-    });
-*/
+    });*/
 });
