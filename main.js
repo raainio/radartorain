@@ -777,6 +777,9 @@ var AuthGuard = /** @class */ (function () {
         //console.log('AuthGuard#canActivate called');
         return this.fidjService.isLoggedIn();
     };
+    AuthGuard.prototype.testFunction = function (a) {
+        return a + 1;
+    };
     AuthGuard = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'
