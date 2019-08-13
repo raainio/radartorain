@@ -82,8 +82,8 @@ Project is under licence **MIT???** for raain.io
 Feel free to contact team on twitter
 
 
-[fidj-image]: https://fidj.ovh/_/RadarToRain/badges/github.svg
-[fidj-url]: https://fidj.ovh/_/RadarToRain
+[fidj-image]: https://fidj.ovh/_/radartorain/badges/github.svg
+[fidj-url]: https://fidj.ovh/_/radartorain
 [youtube-img]: http://img.youtube.com/vi/0FbnCWWg_NY/0.jpg
 [youtube-video]: https://www.youtube.com/embed/0FbnCWWg_NY?autoplay=true
 [travis-image]: https://travis-ci.org/raainio/radartorain.svg?branch=master
