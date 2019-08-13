@@ -5,6 +5,7 @@ node_js:
 branches:
   only:
     - master
+    - /v\d+\.\d+[a-z]/
 install:
  - git config remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
  - git fetch --tags --depth=10000
@@ -26,7 +27,6 @@ deploy:
   github-token: $GH_TOKEN
   keep-history: true
   on:
-    branch: master
     tags: true
 env:
   global:
