@@ -1,5 +1,5 @@
 
 
-export const version = '0.0.21';
+export const version = '0.0.22';
 
 
