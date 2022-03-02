@@ -382,7 +382,7 @@ var blockedTags = ['script', 'style', 'iframe', 'meta', 'link', 'object', 'embed
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "version", function() { return version; });
-var version = '0.0.34';
+var version = '0.0.35';
 
 
 /***/ })
