@@ -1,6 +1,28 @@
 $(document).ready(function () {
 
-    $(".mag").draggable();
+    // $(".mag")?.draggable();
+    $(".mag2")?.draggable({
+        drag: function (event, ui) {
+
+            // Keep the left edge of the element
+            // at least 100 pixels from the container
+            // console.log('drag', ui);
+            const width = $(".mag2").width();
+            const height = $(".mag2").height();
+            const width2 = $(".map2").width();
+            const posX = 0 - ui.position.left;
+            const posY = 0 - ui.position.top;
+            console.log('posX', ui.position.left, posX);
+            console.log('posY', ui.position.top, posY);
+
+            $(".mag2").css('backgroundPositionX', posX);
+            $(".mag2").css('backgroundPositionY', posY);
+            $(".mag2").css('backgroundSize', width2);
+            // ui.position.left = Math.min(100, ui.position.left);
+            // console.log($('.mag2').css('backgroundPosition'));
+
+        }
+    }); // {scroll: true, containment: 'map'}
 
     const scrollConfPos = [
         {name: '.navbar-brand', pos: 120},
@@ -44,14 +66,14 @@ $(document).ready(function () {
 
     modalEl?.on('show.bs.modal', function (event) {
         try {
-            videoEl.play();
+            videoEl?.play();
         } catch (e) {
             console.warn(e)
         }
     });
     modalEl?.on('hide.bs.modal', function (event) {
         try {
-            videoEl.pause();
+            videoEl?.pause();
         } catch (e) {
             console.warn(e)
         }
