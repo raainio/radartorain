@@ -39,7 +39,7 @@ $(document).ready(function () {
     });
 
 
-    const modalEl = $('#exampleModal');
+    const modalEl = $('#videoModal');
     const videoEl = document.getElementById("video");
 
     modalEl?.on('show.bs.modal', function (event) {
