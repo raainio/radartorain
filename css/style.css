@@ -1,14 +1,25 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);
 
 body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1em;
+    /* font-family: 'Roboto', sans-serif;*/
+    font-size: 1.1em;
     background-color: rgb(26, 27, 27);
     color: rgb(183, 177, 177);
 }
 
 .bgc-dark {
     background-color: rgb(26, 27, 27) !important;
+}
+
+nav-enlarger {
+    display: block;
+    height: 70px;
+}
+
+logo {
+    position: absolute;
+    top: 0;
+    z-index: 1500;
 }
 
 .h1, h1 {
@@ -25,19 +36,30 @@ body {
     font-size: 1.4rem;
 }
 
+.h3, h3 {
+    font-size: 1.3rem;
+}
+
+.h3, h3 a:hover {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
 a {
     text-decoration: none;
-    color: #cb1d1d;
-    /*border-bottom: 1px solid #333333;*/
+    color: rgb(246, 239, 239);
     transition: all .4s ease;
 
-    font-size: 1.1em;
+    /*
+    font-size: 1.3em;
     font-family: "American Typewriter", serif;
+    border-bottom: 1px solid #333333;
+    */
 }
 
 a:hover {
-    color: #be6f6f;
-    border-bottom: 1px solid #cb1d1d;
+    color: rgb(225, 118, 36);
+    border-bottom: 1px solid rgb(225, 118, 36);
 }
 
 .visible {
@@ -109,7 +131,20 @@ a:hover {
 
 .wrapper section article {
     width: 70%;
-    margin: 10% auto 10% auto;
+    margin: 20px auto 20px auto;
+}
+
+#quote {
+    padding: 1px 0px 1px 100px;
+    color: #837b6e;
+    font-size: 0.9em;
+    font-style: italic;
+    background-color: #282828;
+}
+
+#quote a {
+    color: #837b6e;
+    text-decoration-line: underline;
 }
 
 .full-height {
@@ -141,7 +176,6 @@ a:hover {
     background-image: url("https://www.ownsport.fr/blog/wp-content/uploads/2018/02/Arts-martiaux-1024x638.jpg");
 }
  */
-
 
 #intro {
     content: "";
