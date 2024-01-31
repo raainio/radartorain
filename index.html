@@ -1,25 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <title>Radar To Rain</title>
+    <meta charset="UTF-8">
+    <title>RadarToRain</title>
 
-  <base href="/" />
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
 
-  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="msapplication-tap-highlight" content="no" />
+    <link href="./assets/icon/favicon.ico" rel="icon" type="image/x-icon"/>
 
-  <link rel="icon" type="image/png" href="assets/icon/favicon.ico" />
+    <!-- CSS -->
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,900,400italic,700italic' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
-  <!-- add to homescreen for ios -->
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <!-- JS -->
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+    <script src='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+
 </head>
-
 <body>
-  <app-root></app-root>
-<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="es2015-polyfills.js" nomodule></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
 
+<h1><img height="120px" src="./assets/logoR2R_slogan.png"></h1>
+
+<nav class="navbar navbar-expand sticky-top navbar-dark bgc-dark">
+    <div class="navbar-brand hidden">
+        <a href="#">
+            <img alt="sanda b." height="30px" src="./assets/logoR2R_NoirBlanc.jpg">
+        </a>
+    </div>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item" data-target="#exampleModal" data-toggle="modal">
+                <a class="nav-link" href="#">explanation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container-fluid wrapper bgc-dark">
+
+    <section id="intro" style="text-align: center;">
+        <a id="play">
+            <button class="btn btn-link" type="button">
+                <img src="assets/play.svg" width="60px"/>
+            </button>
+        </a>
+    </section>
+
+    <section class="" id="reality">
+        <article>
+            <h2>Do radar's rain images reflect reality ?</h2>
+            <span>
+                Few users of these images are aware of the discrepancy that exists with ground-based rain measurements (rain gauges).<br>
+                However, the gap is often significant and radar's image correction is one of the most relevant meteorological areas to challenge.
+            </span>
+        </article>
+    </section>
+    <section class="bg-dark" id="quote">
+        <article class="font-italic">
+            <h2>Encyclopedia.pub (scientific content platform for researchers) :</h2>
+            <span>
+                Meteorological radar measurements are obviously linked to significant and sometimes even significant errors;
+                therefore, radar can be called a semi-quantitative measuring device (...) Radar errors are difficult to diagnose
+                and therefore difficult to eliminate completely (...)<br>
+                Weather radar measurements have enormous potential in hydrological applications, even if they are not yet fully exploited.
+            </span><br>
+            <a href="https://encyclopedia.pub/entry/7058">https://encyclopedia.pub/entry/7058</a>
+        </article>
+    </section>
+    <section class="" id="R2R">
+        <article>
+            <h2>What is the goal of RadarToRain ?</h2>
+            <span>
+            Offer a radar image as close as possible to reality thanks to innovative processing based on AI.
+            </span>
+        </article>
+    </section>
+
+    <section class="full-height" id="map">
+        <div>
+            <div class="map"></div>
+            <div class="mag"></div>
+        </div>
+    </section>
+
+    <section class="" id="quality">
+        <article>
+            <h2>How to evaluate the quality of the image corrected with the RadarToRain process ?</h2>
+            <span>
+                To be convinced of the quality of the corrected images, it can be compared with ground measurements (rain gauges)
+                into our radarToRain.com web service. <br>
+                This comparison method can also be implemented by our customers (on demand).
+            </span>
+        </article>
+    </section>
+    <section class="" id="forecasting">
+        <article>
+            <h2>Can RadarToRain process also improve forecasting ?</h2>
+            <span>
+            As the entire image is corrected, reliable predictions will be obtained from knowledge of the speed.
+            </span>
+        </article>
+    </section>
+    <section class="full-height d-flex justify-content-center" id="contact">
+        <div class="align-self-center">
+            <h1 class="text-center">Interested ?</h1>
+            <h3 class="hidden" id="contactMail"><a href="mailto:contact@radartorain.com">contact@radartorain.com</a>
+            </h3>
+        </div>
+    </section>
+
+</div>
+
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal" role="dialog"
+     tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <video controls id="video" width="960">
+                <source src="./assets/R2R_Trailer.mp4" type="video/mp4"/>
+            </video>
+        </div>
+    </div>
+</div>
+
+<!--
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+-->
+<script src="js/script.js"></script>
+
+</body>
 </html>
