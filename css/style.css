@@ -14,7 +14,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     */
     font-family: 'Nunito', sans-serif;
-    font-size: 1.1em;
+    font-size: 18px;
     background-color: rgb(26, 27, 27);
     color: rgb(183, 177, 177);
 }
@@ -46,20 +46,17 @@ logo img {
 
 .h1, h1 {
     font-weight: 300;
-    font-size: 2em;
+    font-size: 25px;
     padding: 20px 20px 0 20px;
     margin: 0;
-    /* border-bottom: 2px solid #cb1d1d;
-     margin-bottom: 1em;
-    font-family: "American Typewriter", serif;*/
 }
 
 .h2, h2 {
-    font-size: 1.4rem;
+    font-size: 22px;
 }
 
 .h3, h3 {
-    font-size: 1.3rem;
+    font-size: 20px;
 }
 
 .h3, h3 a:hover {
@@ -71,12 +68,6 @@ a {
     text-decoration: none;
     color: rgb(246, 239, 239);
     transition: all .4s ease;
-
-    /*
-    font-size: 1.3em;
-    font-family: "American Typewriter", serif;
-    border-bottom: 1px solid #333333;
-    */
 }
 
 a:hover {
@@ -106,8 +97,16 @@ a:hover {
     position: absolute;
     top: 50%;
     left: 50%;
+
     height: 10em;
     width: 10em;
+}
+
+@media (min-width: 992px) {
+    .mag2 {
+        height: 20em;
+        width: 20em;
+    }
 }
 
 .mag2:after {
@@ -119,8 +118,7 @@ a:hover {
     width: 80%;
     margin-top: 10px;
     text-align: center;
-    font-size: 1em;
-    font-family: "Arial Rounded MT Bold", serif;
+    font-size: 18px;
     color: white;
     position: absolute;
 }
@@ -143,10 +141,6 @@ a:hover {
 .quote,
 .quote .card,
 .quote .card .btn {
-    /*
-    padding: 1px 0px 1px 100px;
-    font-size: 0.9em;
-    */
     color: #837b6e;
     font-style: italic;
     background-color: #282828;
