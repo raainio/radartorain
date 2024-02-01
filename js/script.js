@@ -1,28 +1,45 @@
 $(document).ready(function () {
 
-    // $(".mag")?.draggable();
     $(".mag2")?.draggable({
         drag: function (event, ui) {
 
-            // Keep the left edge of the element
-            // at least 100 pixels from the container
-            // console.log('drag', ui);
-            const width = $(".mag2").width();
-            const height = $(".mag2").height();
-            const width2 = $(".map2").width();
+            const width = $(".map2").width();
+            const height = $(".map2").height();
+            const magSize = $(".mag2").width();
+
+            const minLeft = Math.min(width - magSize, ui.position.left);
+            const minTop = Math.min(height - magSize, ui.position.top);
+            const maxLeft = Math.max(0, ui.position.left);
+            const maxTop = Math.max(0, ui.position.top);
+            const maxLeftDone = maxLeft === 0;
+            const maxTopDone = maxTop === 0;
+            const minLeftDone = minLeft === width - magSize;
+            const minTopDone = minTop === height - magSize;
+
+            if (maxLeftDone || maxTopDone || minLeftDone || minTopDone) {
+                console.log('max done');
+                if (maxLeftDone) {
+                    ui.position.left = maxLeft;
+                }
+                if (minLeftDone) {
+                    ui.position.left = minLeft;
+                }
+                if (maxTopDone) {
+                    ui.position.top = maxTop;
+                }
+                if (minTopDone) {
+                    ui.position.top = minTop;
+                }
+            }
+
             const posX = 0 - ui.position.left;
             const posY = 0 - ui.position.top;
-            console.log('posX', ui.position.left, posX);
-            console.log('posY', ui.position.top, posY);
 
             $(".mag2").css('backgroundPositionX', posX);
             $(".mag2").css('backgroundPositionY', posY);
-            $(".mag2").css('backgroundSize', width2);
-            // ui.position.left = Math.min(100, ui.position.left);
-            // console.log($('.mag2').css('backgroundPosition'));
-
+            $(".mag2").css('backgroundSize', width);
         }
-    }); // {scroll: true, containment: 'map'}
+    });
 
     const scrollConfPos = [
         {name: '.navbar-brand', pos: 120},

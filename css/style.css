@@ -31,7 +31,7 @@ nav-enlarger {
 logo {
     position: absolute;
     top: 0;
-    z-index: 1500;
+    z-index: 1021;
 }
 
 logo img {
@@ -140,17 +140,27 @@ a:hover {
     margin: 20px auto 20px auto;
 }
 
-#quote {
+.quote,
+.quote .card,
+.quote .card .btn {
+    /*
     padding: 1px 0px 1px 100px;
-    color: #837b6e;
     font-size: 0.9em;
+    */
+    color: #837b6e;
     font-style: italic;
     background-color: #282828;
 }
 
-#quote a {
+.quote a {
     color: #837b6e;
     text-decoration-line: underline;
+}
+
+.quote .card-header,
+.quote .card-body {
+    width: 70%;
+    margin: 0 auto 0 auto;
 }
 
 .full-height {
@@ -168,14 +178,17 @@ a:hover {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    height: 25em;
+    height: 300px;
     width: 100%;
-    background-image: url("../assets/rain_cloud.png");
+    background-image: url("../assets/RadarToRain_Video.jpg");
 }
 
 #intro a {
     position: absolute;
-    top: 150px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 #intro a:hover {
