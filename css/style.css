@@ -7,6 +7,8 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 
 body {
+    top: 0 !important;
+
     /*
     font-family: 'Roboto', sans-serif;
     font-family: 'Bangers', sans-serif;
@@ -25,22 +27,44 @@ body {
 
 nav-enlarger {
     display: block;
-    height: 70px;
+    height: 20px;
 }
 
 logo {
     position: absolute;
     top: 0;
     z-index: 1021;
+    margin: 20px;
 }
 
 logo img {
-    height: 80px;
+    height: 60px;
+}
+
+.title {
+    color: #ffffff;
+    font-weight: bold;
+    flex-direction: row;
+}
+
+.title1 {
+    padding-left: 100px;
+    font-size: xxx-large;
+}
+
+.subTitle1 {
+    padding-left: 20px;
+    padding-top: 30px;
+    display: none;
 }
 
 @media (min-width: 576px) {
     logo img {
-        height: 120px;
+        height: 80px;
+    }
+
+    .subTitle1 {
+        display: block;
     }
 }
 
@@ -72,8 +96,8 @@ a {
 }
 
 a:hover {
-    color: rgb(225, 118, 36);
-    border-bottom: 1px solid rgb(225, 118, 36);
+    color: #E17624FF;
+    border-bottom: 1px solid #E17624FF;
 }
 
 .visible {
@@ -208,4 +232,32 @@ a:hover {
     }
 }
 */
+
+.goog-te-gadget img {
+    display: none !important;
+}
+
+
+body > div.skiptranslate {
+    display: none;
+}
+
+.goog-te-gadget-icon {
+    display: none;
+}
+
+.goog-te-gadget-simple {
+    background-color: rgb(26, 27, 27) !important;
+    border: 0 !important;
+    font-size: 10pt;
+    font-weight: 800;
+    display: inline-block;
+    padding: 10px 10px !important;
+    cursor: pointer;
+    zoom: 1;
+}
+
+.goog-te-gadget-simple span {
+    color: #E17624FF !important;
+}
 

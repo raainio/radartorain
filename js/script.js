@@ -43,6 +43,7 @@ $(document).ready(function () {
 
     const scrollConfPos = [
         {name: '.navbar-brand', pos: 120},
+        {name: '.title2', pos: 120},
         {name: '#contactMail', pos: 2200}
     ];
 
@@ -94,6 +95,14 @@ $(document).ready(function () {
         } catch (e) {
             console.warn(e)
         }
+    });
+
+    $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+        $('.goog-te-menu-value span:first').html('LANGUAGE');
+        const skipT = $('.goog-te-menu-frame.skiptranslate');
+        setTimeout(function () {
+            skipT.contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');
+        }, 100);
     });
 
 });
