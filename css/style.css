@@ -27,45 +27,46 @@ body {
 
 nav-enlarger {
     display: block;
-    height: 20px;
+    /*height: 20px;*/
 }
 
 logo {
     position: absolute;
     top: 0;
     z-index: 1021;
-    margin: 20px;
+    margin: 50px 0 0 50px;
 }
 
 logo img {
-    height: 60px;
+    height: 80px;
 }
 
 .title {
     color: #ffffff;
     font-weight: bold;
-    flex-direction: row;
+    /*flex-direction: row;*/
 }
 
 .title1 {
-    padding-left: 100px;
+    padding-left: 160px;
     font-size: xxx-large;
+    padding-top: 30px;
+    vertical-align: bottom;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    height: 90px;
 }
 
 .subTitle1 {
-    padding-left: 20px;
-    padding-top: 30px;
-    display: none;
+    padding-left: 160px;
+    font-size: x-large;
 }
 
-@media (min-width: 576px) {
-    logo img {
-        height: 80px;
-    }
 
-    .subTitle1 {
-        display: block;
-    }
+@media (min-width: 576px) {
+    /* logo img {
+         height: 80px;
+     }*/
 }
 
 .h1, h1 {
