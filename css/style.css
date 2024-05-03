@@ -42,6 +42,10 @@ logo img {
     height: 60px;
 }
 
+.navbar-brand img {
+    height: 30px;
+}
+
 .title {
     color: #ffffff;
     font-weight: bold;
