@@ -17,13 +17,18 @@ body {
     font-family: 'Nunito', sans-serif;
     */
     font-family: 'Comfortaa', sans-serif;
-    font-size: 16px; /* 20px */
-    background-color: rgb(26, 27, 27);
+    font-size: 14px; /* 20px */
+
+    /*background-color: rgb(26, 27, 27);*/
+    background: rgb(2, 13, 27);
+
     color: rgb(183, 177, 177);
 }
 
 .bgc-dark {
-    background-color: rgb(26, 27, 27) !important;
+    /*background-color: rgb(26, 27, 27) !important;*/
+    background: rgb(2, 13, 27);
+    background: linear-gradient(90deg, rgba(2, 13, 27, 1) 0%, rgb(8, 38, 76, 1) 100%);
 }
 
 nav-enlarger {
@@ -93,21 +98,35 @@ logo img {
 
 .h1, h1 {
     font-weight: 300;
-    font-size: 26px;
+    font-size: 22px;
     padding: 20px 20px 0 20px;
     margin: 0;
 }
 
 .h2, h2 {
-    font-size: 24px;
+    font-size: 20px;
     color: #ffffff;
 }
 
 .h3, h3 {
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .h3, h3 a:hover {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+b {
+    color: rgb(67, 128, 204);
+}
+
+.h5, h5 a {
+    font-size: 14px;
+    color: rgb(67, 128, 204);
+}
+
+.h5, h5 a:hover {
     text-decoration: none !important;
     border-bottom: none !important;
 }
@@ -184,7 +203,18 @@ a:hover {
 
 .wrapper section article {
     width: 70%;
-    margin: 30px auto 30px auto;
+    margin: 0 auto 0 auto;
+    padding-top: 50px;
+}
+
+#studies {
+    padding-top: 40px;
+}
+
+.reference {
+    text-align: right;
+    color: rgb(67, 128, 204);
+    display: block;
 }
 
 .quote,
@@ -270,10 +300,11 @@ body > div.skiptranslate {
 }
 
 .goog-te-gadget-simple {
-    background-color: rgb(26, 27, 27) !important;
+    background-color: rgb(8, 38, 76) !important;
     border: 0 !important;
-    font-size: 10pt;
-    font-weight: 800;
+    font-size: 16px;
+    /*font-weight: 800;*/
+    font-family: 'Comfortaa', sans-serif;
     display: inline-block;
     padding: 10px 10px !important;
     cursor: pointer;
@@ -281,5 +312,9 @@ body > div.skiptranslate {
 }
 
 .goog-te-gadget-simple span {
+    color: #E17624FF !important;
+}
+
+.nav-link {
     color: #E17624FF !important;
 }

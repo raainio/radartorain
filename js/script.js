@@ -42,13 +42,13 @@ $(document).ready(function () {
     });
 
     const scrollConfPos = [
-        {name: '.navbar-brand', pos: 120},
-        {name: '.title2', pos: 120},
+        {name: '.navbar-brand', pos: 220},
+        {name: '.title2', pos: 220},
         {name: '#contactMail', pos: 2200}
     ];
 
     function isScrolledIntoView(elem) {
-        const minTopMargin = 120;
+        const minTopMargin = 220;
         const docViewTop = $(window).scrollTop();
         if (docViewTop < minTopMargin) {
             return false;
