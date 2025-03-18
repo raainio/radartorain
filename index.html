@@ -7,25 +7,27 @@
     <link href="assets/icon/favicon_v1.ico" rel="icon" type="image/x-icon"/>
     <title>RadarToRain.com</title>
 
-    <!-- CSS -->
-    <link  href="./css/http_maxcdn.bootstrapcdn.com_bootstrap_4.0.0_css_bootstrap.css" rel="stylesheet">
+    <!-- Downloaded CSS Resources -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
 
-    <!-- JS -->
-    <script src="./js/http_cdnjs.cloudflare.com_ajax_libs_jquery_3.2.1_jquery.js"></script>
-    <script src="./js/http_ajax.googleapis.com_ajax_libs_jqueryui_1.13.2_jquery-ui.js"></script>
-    <script src="./js/http_cdn.jsdelivr.net_npm_popper.js@1.12.9_dist_umd_popper.js"></script>
-    <script src="./js/http_cdn.jsdelivr.net_npm_bootstrap@4.0.0_dist_js_bootstrap.js"></script>
+    <!-- Downloaded JS Libraries -->
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/jquery.ui.touch-punch.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
 </head>
 <body>
 
 <nav-enlarger></nav-enlarger>
 
 <div class="navbar collapse navbar-collapse" style="padding:0;">
-    <img src="assets/R2R_header.png" style="width: 100%;">
+    <img src="assets/R2R_header.png" alt="RadarToRain Header" style="width: 100%;">
 </div>
 
-<nav class="navbar navbar-expand sticky-top navbar-dark bgc-dark">
+<nav class="navbar navbar-expand sticky-top navbar-dark bgc-dark" role="navigation" aria-label="Main navigation">
     <div class="navbar-brand hidden">
         <a href="#">
             <img alt="RadarToRain" src="./assets/logoR2R_NoirBlanc.jpg">
@@ -144,19 +146,15 @@ We don't do forecast. But our processing that covers the entire image can help n
             <article class="row">
                 <blockquote class="col-sm">
                     <h5>
-                        <a href="https://www.linkedin.com/posts/radartorain_mettechexpo-radartorain-weathertech-activity-7248697265286967296-1rBV?utm_source=share&utm_medium=member_desktop"  target="_blank">Case
-                            Study Paris, 12th July 2024</a>
+                        <a href="https://www.linkedin.com/posts/radartorain_radartorain-activity-7214697150864125953-1PFd?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAOO_ucBbfc1i9VJS5GsII6ud_TKdpxOTDk"  target="_blank">Case
+                            Paris, Study in July 2024</a>
                     </h5>
-                    <iframe allowfullscreen=""
-                            frameborder="0" height="399"
-                            src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7248696955193765888?compact=1"
-                            title="Embedded post"
-                            width="400"></iframe>
+                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7214697150377533441?collapsed=1" height="399" width="400" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
                 </blockquote>
                 <blockquote class="col-sm">
                 <h5>
                     <a href="https://www.linkedin.com/posts/radartorain_mettechexpo-radartorain-weathertech-activity-7247577551752032259-ef4K?utm_source=share&utm_medium=member_desktop"  target="_blank">Case
-                        Case Study Marseille, 4th september 2024</a>
+                         Marseille, Study 4th september 2024</a>
                 </h5>
                 <iframe allowfullscreen=""
                         frameborder="0" height="399"
@@ -167,11 +165,13 @@ We don't do forecast. But our processing that covers the entire image can help n
             </article>
         </section>
 
-        <section class="full-height d-flex justify-content-center" id="contact">
-            <div class="align-self-center">
-                <h3 class="text-center hidden" id="contactMail">
-                    <a class="notranslate" href="mailto:contact@radartorain.com">contact@radartorain.com</a>
-                </h3>
+        <section class="full-height d-flex justify-content-center align-items-center" id="contact">
+            <div class="container text-center">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="lead mb-4">Interested in our radar processing technology?</p>
+                <a href="mailto:contact@radartorain.com" class="btn btn-primary btn-lg">
+                    Contact Us
+                </a>
             </div>
         </section>
     </section>
@@ -188,9 +188,6 @@ We don't do forecast. But our processing that covers the entire image can help n
         </div>
     </div>
 </div>
-
-<script src="./js/jquery.ui.touch-punch.js" type="text/javascript"></script>
-<script src="./js/script.js" type="text/javascript"></script>
 
 <!--
 
