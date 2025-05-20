@@ -1,0 +1,508 @@
+/*
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Bangers);
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+ */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+
+/* Variables */
+:root {
+    --primary-color: rgb(67, 128, 204);
+    --secondary-color: #E17624FF;
+    --dark-bg: rgb(2, 13, 27);
+    --dark-bg-gradient: linear-gradient(90deg, rgba(2, 13, 27, 1) 0%, rgb(8, 38, 76, 1) 100%);
+    --text-color: rgb(183, 177, 177);
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+body {
+    top: 0 !important;
+    /*
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Bangers', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    */
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 16px;
+
+    /*background-color: rgb(26, 27, 27);*/
+    background: var(--dark-bg);
+
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.bgc-dark {
+    /*background-color: rgb(26, 27, 27) !important;*/
+    background: var(--dark-bg);
+    background: var(--dark-bg-gradient);
+}
+
+nav-enlarger {
+    display: block;
+    /*height: 20px;*/
+}
+
+logo {
+    position: absolute;
+    top: 0;
+    z-index: 1021;
+    margin: 50px 0 0 30px;
+}
+
+logo img {
+    height: 60px;
+}
+
+.navbar-brand img {
+    height: 40px;
+    transition: var(--transition);
+}
+
+.title {
+    color: #ffffff;
+    font-weight: bold;
+    /*flex-direction: row;*/
+}
+
+.title1 {
+    padding-top: 30px;
+    vertical-align: bottom;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    height: 90px;
+}
+
+.title1 {
+    padding-left: 100px;
+    font-size: xx-large;
+}
+
+.subTitle1 {
+    padding-left: 100px;
+    font-size: initial;
+}
+
+@media (min-width: 576px) {
+
+    logo {
+        margin: 50px 0 0 50px;
+    }
+
+    logo img {
+        height: 80px;
+    }
+
+    .title1 {
+        padding-left: 160px;
+        font-size: xxx-large;
+    }
+
+    .subTitle1 {
+        padding-left: 160px;
+        font-size: x-large;
+    }
+}
+
+.h1, h1 {
+    font-weight: 300;
+    font-size: 22px;
+    padding: 20px 20px 0 20px;
+    margin: 0;
+}
+
+.h2, h2 {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.h3, h3 {
+    font-size: 18px;
+}
+
+.h3, h3 a:hover {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+b {
+    color: var(--primary-color);
+}
+
+.h5, h5 a {
+    font-size: 14px;
+    color: var(--primary-color);
+}
+
+.h5, h5 a:hover {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 2s linear;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.mag2 {
+    background: url("../assets/1.jpg") no-repeat;
+    background-size: 10%;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 0 50px rgb(24 45 51 / 96%), inset 0 0 4px rgb(160 88 88);
+    cursor: all-scroll;
+    overflow: hidden;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+
+    height: 10em;
+    width: 10em;
+}
+
+@media (min-width: 992px) {
+    .mag2 {
+        height: 20em;
+        width: 20em;
+    }
+}
+
+.mag2:after {
+    border-radius: 50%;
+    content: 'RadarToRain';
+    height: 50%;
+    left: 10%;
+    top: 5%;
+    width: 80%;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+}
+
+.wrapper {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 400px;
+}
+
+.wrapper section {
+    position: relative;
+}
+
+.wrapper section article {
+    width: 70%;
+    margin: 0 auto 0 auto;
+    padding-top: 50px;
+}
+
+#studies {
+    padding-top: 40px;
+}
+
+.reference {
+    text-align: right;
+    color: var(--primary-color);
+    display: block;
+}
+
+.quote,
+.quote .card,
+.quote .card .btn {
+    color: #837b6e;
+    font-style: italic;
+    background-color: #282828;
+}
+
+.quote a {
+    color: #837b6e;
+    text-decoration-line: underline;
+}
+
+.quote .card-header,
+.quote .card-body {
+    width: 70%;
+    margin: 0 auto 0 auto;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.full-width {
+    width: 100vh;
+}
+
+#intro {
+    content: "";
+    display: block;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+    background-image: url("../assets/RadarToRain_Video.jpg");
+}
+
+#intro a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#intro a:hover {
+    border-bottom: 0;
+}
+
+.modal-content video {
+    width: 100%;
+}
+
+/*
+@media (min-width: 576px) {
+    .modal-content video {
+        left: -200px;
+    }
+}
+
+@media (min-width: 992px) {
+    .modal-content video {
+        left: -100px;
+        width: 960px;
+    }
+}
+*/
+
+.goog-te-gadget img {
+    display: none !important;
+}
+
+body > div.skiptranslate {
+    display: none;
+}
+
+.goog-te-gadget-icon {
+    display: none;
+}
+
+.goog-te-gadget-simple {
+    background-color: rgb(8, 38, 76) !important;
+    border: 0 !important;
+    font-size: 16px;
+    /*font-weight: 800;*/
+    font-family: 'Comfortaa', sans-serif;
+    display: inline-block;
+    padding: 10px 10px !important;
+    cursor: pointer;
+    zoom: 1;
+}
+
+.goog-te-gadget-simple span {
+    color: #E17624FF !important;
+}
+
+.nav-link {
+    color: var(--white) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--secondary-color) !important;
+}
+
+/* Sections */
+.section {
+    padding: 5rem 0;
+    position: relative;
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: var(--white);
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+.section p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Case Studies */
+.case-study {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    transition: var(--transition);
+}
+
+.case-study:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.case-study h5 {
+    margin-bottom: 1.5rem;
+}
+
+.case-study iframe {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Contact Section */
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 1rem 2rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background: var(--dark-bg);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Modal */
+.modal-content {
+    background: var(--dark-bg);
+    border: none;
+    border-radius: 10px;
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section {
+        padding: 3rem 0;
+    }
+
+    .section h2 {
+        font-size: 1.75rem;
+    }
+
+    .case-study {
+        margin-bottom: 1.5rem;
+    }
+
+    .case-study iframe {
+        height: 300px;
+    }
+
+    .navbar-brand img {
+        height: 30px;
+    }
+}
+
+/* Animations */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Google Translate Customization */
+.goog-te-gadget {
+    color: var(--text-color) !important;
+}
+
+.goog-te-gadget .goog-te-combo {
+    background: var(--dark-bg);
+    color: var(--text-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    padding: 0.5rem;
+}
+
+/* Reference Links */
+.reference {
+    display: inline-block;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+/* Utility Classes */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.text-secondary {
+    color: var(--secondary-color) !important;
+}
+
+/* Loading Animation */
+.loading {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+.loaded {
+    opacity: 1;
+}
