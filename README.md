@@ -23,7 +23,7 @@ We're here to help! If you don't have access to Jira, you can use this repositor
 #### Resources
 
 - Create or follow your [issues](https://github.com/raainio/radartorain/issues)
-- 📋 [Ticket Formatting Guidelines](https://github.com/raainio/radartorain/wiki/ticket-format) - Learn how to properly format your tickets
+- [Ticket Formatting Guidelines](https://github.com/raainio/radartorain/wiki/ticket-format) - Learn how to properly format your tickets
 
 ---
 
