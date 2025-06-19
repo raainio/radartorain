@@ -10,17 +10,17 @@
 
 ---
 
-## 🗺️ Roadmap
+### 🗺️ Roadmap
 
 Check out our development roadmap to see what features are coming next!
 
 [![Roadmap](https://img.shields.io/badge/View-Roadmap-green?style=flat-square&logo=github)](https://github.com/orgs/raainio/projects/1)
 
-## 🤝 Support
+### 🤝 Support
 
 We're here to help! If you don't have access to Jira, you can use this repository to ask questions or report any concerns.
 
-### Resources
+#### Resources
 
 - 📋 [Ticket Formatting Guidelines](https://github.com/raainio/radartorain/wiki/ticket-format) - Learn how to properly format your tickets
 
