@@ -6,10 +6,10 @@
     <meta name="description" content="RadarToRain - Innovative radar processing technology for accurate rainfall measurement">
     <meta name="keywords" content="radar, rainfall, weather, precipitation, measurement">
     <meta name="author" content="RadarToRain">
-    
+
     <!-- Favicon -->
-    <link href="assets/icon/favicon_v1.ico" rel="icon" type="image/x-icon"/>
-    
+    <link href="./assets/icon/favicon_v1.ico" rel="icon" type="image/x-icon"/>
+
     <!-- Title -->
     <title>RadarToRain.com</title>
 
@@ -17,15 +17,21 @@
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
 
+    <!-- Required for IE11 Only -->
+    <script src="./js/http_cdnjs.cloudflare.com_polyfill_v3_polyfill.js"></script>
+
     <!-- Core JS Libraries -->
     <script src="./js/jquery-3.2.1.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/http_unpkg.com_@webcomponents_webcomponentsjs@2.1.3_webcomponents-bundle.js"></script>
 
     <!-- Lazy Loaded JS Libraries -->
     <script defer src="./js/jquery-ui.min.js"></script>
     <script defer src="./js/jquery.ui.touch-punch.js"></script>
     <script defer src="./js/script.js"></script>
+    <script defer src="./js/http_unpkg.com_@statuspage_status-widget_dist_index.js"></script>
+
 </head>
 <body>
     <!-- Header -->
@@ -134,11 +140,11 @@
                                     Case Study Paris, July 2024
                                 </a>
                             </h5>
-                            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7214697150377533441?collapsed=1" 
-                                    height="399" 
-                                    width="400" 
-                                    frameborder="0" 
-                                    allowfullscreen="" 
+                            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7214697150377533441?collapsed=1"
+                                    height="399"
+                                    width="400"
+                                    frameborder="0"
+                                    allowfullscreen=""
                                     title="Embedded post">
                             </iframe>
                         </div>
@@ -150,11 +156,11 @@
                                     Case Study Marseille, September 2024
                                 </a>
                             </h5>
-                            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7247577324739596290?compact=1" 
-                                    height="399" 
-                                    width="400" 
-                                    frameborder="0" 
-                                    allowfullscreen="" 
+                            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7247577324739596290?compact=1"
+                                    height="399"
+                                    width="400"
+                                    frameborder="0"
+                                    allowfullscreen=""
                                     title="Embedded post">
                             </iframe>
                         </div>
@@ -189,8 +195,10 @@
     <!-- Footer -->
     <footer class="bgc-dark text-center py-3">
         <div class="container">
+            <statuspage-widget src="https://radartorain.statuspage.io" appearance="?"></statuspage-widget>
+
             <p class="mb-0">&copy; 2024 RadarToRain. All rights reserved.</p>
         </div>
     </footer>
 </body>
-</html> 
+</html>
