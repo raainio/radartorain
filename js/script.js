@@ -1,83 +1,82 @@
 $(document).ready(function () {
 
-    $(".mag2")?.draggable({
-        drag: function (event, ui) {
+    // ============================================
+    // SHRINKING HEADER ON SCROLL
+    // ============================================
 
-            const width = $(".map2").width();
-            const height = $(".map2").height();
-            const magSize = $(".mag2").width();
+    function handleNavbarScroll() {
+        const navbar = $('#mainNav');
+        const headerBanner = $('.header-banner');
+        const headerBadge = $('#headerBadge');
+        const scrollTop = $(window).scrollTop();
+        const headerHeight = headerBanner.length ? headerBanner.outerHeight() : 100;
 
-            const minLeft = Math.min(width - magSize, ui.position.left);
-            const minTop = Math.min(height - magSize, ui.position.top);
-            const maxLeft = Math.max(0, ui.position.left);
-            const maxTop = Math.max(0, ui.position.top);
-            const maxLeftDone = maxLeft === 0;
-            const maxTopDone = maxTop === 0;
-            const minLeftDone = minLeft === width - magSize;
-            const minTopDone = minTop === height - magSize;
-
-            if (maxLeftDone || maxTopDone || minLeftDone || minTopDone) {
-                console.log('max done');
-                if (maxLeftDone) {
-                    ui.position.left = maxLeft;
-                }
-                if (minLeftDone) {
-                    ui.position.left = minLeft;
-                }
-                if (maxTopDone) {
-                    ui.position.top = maxTop;
-                }
-                if (minTopDone) {
-                    ui.position.top = minTop;
-                }
-            }
-
-            const posX = 0 - ui.position.left;
-            const posY = 0 - ui.position.top;
-
-            $(".mag2").css('backgroundPositionX', posX);
-            $(".mag2").css('backgroundPositionY', posY);
-            $(".mag2").css('backgroundSize', width);
+        // When scrolled past the header banner, add scrolled class
+        if (scrollTop > headerHeight - 80) {
+            navbar.addClass('navbar-scrolled');
+        } else {
+            navbar.removeClass('navbar-scrolled');
         }
-    });
 
-    const scrollConfPos = [
-        {name: '.navbar-brand', pos: 220},
-        {name: '.title2', pos: 220},
-        {name: '#contactMail', pos: 2200}
-    ];
-
-    function isScrolledIntoView(elem) {
-        const minTopMargin = 220;
-        const docViewTop = $(window).scrollTop();
-        if (docViewTop < minTopMargin) {
-            return false;
+        // Hide header badge when scrolling down
+        if (scrollTop > 100) {
+            headerBadge.addClass('hidden');
+        } else {
+            headerBadge.removeClass('hidden');
         }
-        const docViewBottom = docViewTop + $(window).height();
-        const elemTop = $(elem).offset().top;
-        const elemBottom = elemTop + $(elem).height();
-        return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom));
     }
 
+    // Initial check
+    handleNavbarScroll();
+
+    // Handle scroll
     $(window).scroll(function () {
+        handleNavbarScroll();
+        updateActiveNavLink();
+    });
 
-        const activeElements = scrollConfPos
-            .filter(c => isScrolledIntoView(c.name))
-            .map(c => $(c.name));
-        const inactiveElements = scrollConfPos
-            .filter(c => !isScrolledIntoView(c.name))
-            .map(c => $(c.name));
+    // ============================================
+    // SMOOTH SCROLL FOR NAVIGATION LINKS
+    // ============================================
 
-        for (const el of activeElements) {
-            el.removeClass('hidden');
-            el.addClass('visible');
-        }
-        for (const el of inactiveElements) {
-            el.addClass('hidden');
-            el.removeClass('visible');
+    $('a[href^="#"]').on('click', function (e) {
+        const target = $(this.getAttribute('href'));
+
+        if (target.length) {
+            e.preventDefault();
+            const navHeight = $('#mainNav').outerHeight();
+            const offsetTop = target.offset().top - navHeight - 10; // Offset for fixed header + small margin
+
+            $('html, body').stop().animate({
+                scrollTop: offsetTop
+            }, 800, 'swing');
         }
     });
 
+    // ============================================
+    // ACTIVE NAV LINK HIGHLIGHTING
+    // ============================================
+
+    function updateActiveNavLink() {
+        const navHeight = $('#mainNav').outerHeight();
+        const scrollPos = $(window).scrollTop() + navHeight + 50;
+
+        $('#mainNav .nav-link').each(function () {
+            const currLink = $(this);
+            const refElement = $(currLink.attr('href'));
+
+            if (refElement.length &&
+                refElement.position().top <= scrollPos &&
+                refElement.position().top + refElement.height() > scrollPos) {
+                $('#mainNav .nav-link').removeClass('active');
+                currLink.addClass('active');
+            }
+        });
+    }
+
+    // ============================================
+    // VIDEO MODAL HANDLERS
+    // ============================================
 
     const modalEl = $('#videoModal');
     const videoEl = document.getElementById("video");
@@ -89,6 +88,7 @@ $(document).ready(function () {
             console.warn(e)
         }
     });
+
     modalEl?.on('hide.bs.modal', function (event) {
         try {
             videoEl?.pause();
@@ -97,12 +97,45 @@ $(document).ready(function () {
         }
     });
 
+    // ============================================
+    // GOOGLE TRANSLATE CUSTOMIZATION
+    // ============================================
+
     $('#google_translate_element').bind('DOMNodeInserted', function (event) {
         $('.goog-te-menu-value span:first').html('LANGUAGE');
         const skipT = $('.goog-te-menu-frame.skiptranslate');
         setTimeout(function () {
             skipT.contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');
         }, 100);
+    });
+
+    // ============================================
+    // SCROLL ANIMATIONS FOR ELEMENTS
+    // ============================================
+
+    function isScrolledIntoView(elem) {
+        const docViewTop = $(window).scrollTop();
+        const docViewBottom = docViewTop + $(window).height();
+        const elemTop = $(elem).offset().top;
+        const elemBottom = elemTop + $(elem).height();
+        return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom));
+    }
+
+    // Animate elements on scroll (if needed in future)
+    $(window).scroll(function () {
+        $('.fade-in-on-scroll').each(function () {
+            if (isScrolledIntoView(this)) {
+                $(this).addClass('visible');
+            }
+        });
+    });
+
+    // ============================================
+    // MOBILE MENU AUTO-CLOSE
+    // ============================================
+
+    $('.navbar-nav>li>a').on('click', function () {
+        $('.navbar-collapse').collapse('hide');
     });
 
 });
