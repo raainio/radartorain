@@ -73,7 +73,7 @@
                         <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="mailto:contact@radartorain.com">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                     <li class="nav-item">
                         <div class="custom-translate" id="google_translate_element"></div>
@@ -152,11 +152,11 @@
                             <h4>Illustration: July 14, 2025, New York City</h4>
                             <p>New York City experienced near-record rainfall with the second highest hourly accumulation ever recorded by ground measurement.
                                 The closest cumulative value obtained from the conventional radar image (Marshall-Palmer) near this measuring station is
-                                <strong>1.61'' / 41mm</strong> and the RadarToRain data reveals a more realistic value:
+                                <strong>1.61'' / 41mm</strong> and the RadarToRain estimation data reveals a more realistic value:
                                 <strong class="text-primary">2.00'' / 51mm</strong>.</p>
 
                             <img src="./assets/R2R_how.png" alt="How we validate our data" class="img-fluid">
-                            <p class="text-muted small"><a href="mailto:contact@radartorain.com?subject=Request for July 14-15, 2025 New York Event Report">Ask for the full event report (free): The July 14-15, 2025 New York</a></p>
+                            Ask for free event report <a href="mailto:contact@radartorain.com?subject=Request for July 14-15, 2025 New York Event Report">contact@radartorain.com</a>
 
                         </div>
                     </div>
@@ -170,11 +170,13 @@
                             </div>
                             <div class="comparison-item highlight">
                                 <span class="label">RadarToRain</span>
-                                <span class="value text-primary">2.00 in (51 mm)</span>
+                                <span class="value">2.00 in (51 mm)</span>
                                 <span class="badge badge-success">-3%</span>
                             </div>
-                            <div class="comparison-item">
-                                <span class="label">Ground</span>
+                            <div class="comparison-item reference">
+                                <span class="label">
+                                    <a href="https://www.nyc.gov/site/em/about/press-releases/20250715_pr_nycem-City-Responds-To-Hstoric-Rainfall-Event.page" target="_blank">Official meas.</a>
+                                </span>
                                 <span class="value">2.07 in (52.6 mm)</span>
                                 <span class="badge">&nbsp;</span>
                             </div>
@@ -187,21 +189,16 @@
         <!-- Products Section -->
         <section id="products" class="section section-alt">
             <div class="container">
-                <h2 class="section-title">Our products: From Rainfall Archives to Real-Time Vision</h2>
+                <h2 class="section-title">Our products: Rainfall Archives</h2>
                 <div class="row">
-                    <div class="col-lg-8">
-                        <p class="lead">We focus on delivering archived rainfall data.
-                             Real-time images or forecasting services are part of our future roadmap.</p>
-                        <a href="mailto:contact@radartorain.com">
-                            Contact us to find out more
-                        </a>
+                    <div class="col-lg-5">
                         <div class="product-features mt-4">
                             <h4>What we deliver:</h4>
                             <ul class="feature-list">
-                                <li>Cartesian image files compatible with the main modeling tools (GeoTiff, GeoJson, etc.)</li>
-                                <li>Custom area and period of your choice</li>
-                                <li>Resolution of 1 km²</li>
-                                <li>Based on open-data radar and weather datasets from public providers:
+                                <li>Cartesian image files compatible with major modeling tools (GeoTIFF, GeoJSON, etc.)</li>
+                                <li>Customizable area and time period of your choice</li>
+                                <li>1 km² spatial resolution</li>
+                                <li>Derived from open radar and weather datasets from public providers:
                                     <ul>
                                         <li>US: NOAA, ASOS</li>
                                         <li>Europe: Meteo France, OPERA/EUMETNET</li>
@@ -210,7 +207,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <!--<div class="col-lg-4">
                         <div class="coverage-info">
                             <h4>Coverage Map</h4>
                             <div class="coverage-legend">
@@ -226,13 +223,18 @@
                             <p class="text-muted mt-3 small">Availability for 2025/2026:<br>
                             United States (blue), Canada, Europe, and Australia (under construction - purple)</p>
                         </div>
-                    </div>
-                </div>
-                <div class="row mt-5">
-                    <div class="col-12">
+                    </div>-->
+                    <div class="col-lg-7">
                             <img src="./assets/R2R_map.png" alt="RadarToRain Global Coverage Map" class="img-fluid">
                     </div>
-                </div>
+
+                    <div class="col-lg-12">
+                        <div class="product-features">
+                        <p class="lead">We focus on delivering archived rainfall data.
+                            Real-time images or forecasting services are part of our future roadmap: our archives are its foundation.</p>
+                        </div>
+                    </div>
+            </div>
             </div>
         </section>
 
@@ -248,11 +250,7 @@
                     <div class="col-lg-6">
                         <div class="quality-box">
                             <h4>Confidence/Quality Index</h4>
-                            <p>Before any RadarToRain data is billed or delivered, we provide a Confidence/Quality Index for the requested area and period.</p>
-                            <ul>
-                                <li>If it does not meet your requirements, you are free not to place an order</li>
-                                <li>The index reflects the quality of raw data and the consistency of our images with official measurements</li>
-                            </ul>
+                            <p>RadarToRain provides an index showing data quality and consistency with official measurements, before any delivery or billing.</p>
                         </div>
                     </div>
                 </div>
@@ -298,9 +296,6 @@
                             <p>Revisit extreme events and refine flood assessments with corrected radar archives.</p>
                         </div>
                     </div>
-                </div>
-                <div class="text-center mt-4">
-                    <p class="lead"><em>Real time is on the way — our archives are its foundation.</em></p>
                 </div>
             </div>
         </section>
@@ -372,18 +367,24 @@
 
         <!-- Contact Section -->
         <section id="contact" class="section">
-            <div class="container text-center">
+            <div class="container">
                 <h2 class="section-title">Get in Touch</h2>
-                <p class="lead mb-4">Interested in our radar processing technology?</p>
-                <p class="mb-5">Ask for a demo, event reports, or discuss your specific needs</p>
-                <a href="mailto:contact@radartorain.com" class="btn btn-primary btn-lg">
-                    contact@radartorain.com
-                </a>
+                <p class="lead mb-4 text-center">Interested in our radar processing technology?</p>
+                <p class="mb-5 text-center">Ask for a demo, event reports, or discuss your specific needs</p>
+                <p class="mb-5 text-center">
+                    <a href="mailto:contact@radartorain.com">contact@radartorain.com</a><br><br>
+                    <a href="https://www.linkedin.com/company/102044869" target="_blank" rel="noopener noreferrer" class="social-icon primary" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                        </svg>
+                    </a>
+                </p>
+
             </div>
         </section>
     </main>
 
-    <!-- Video Modal -->
+    <!-- Video Modal
     <div class="modal fade" id="videoModal" role="dialog" tabindex="-1" aria-hidden="true" aria-labelledby="videoModalLabel">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
@@ -392,7 +393,7 @@
                 </video>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Footer -->
     <footer class="bgc-dark text-center py-3">
