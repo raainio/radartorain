@@ -588,9 +588,8 @@ body > div.skiptranslate {
     left: 0;
     right: 0;
     bottom: 0;
-    background:
-        radial-gradient(circle at 20% 50%, rgba(67, 128, 204, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(225, 118, 36, 0.05) 0%, transparent 50%);
+    background: radial-gradient(circle at 20% 50%, rgba(67, 128, 204, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(225, 118, 36, 0.05) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -771,7 +770,6 @@ body > div.skiptranslate {
 
 .quality-box {
     background: var(--bg-color);
-    border: 1px solid var(--primary-color);
     border-radius: 15px;
     padding: 2rem;
 }
