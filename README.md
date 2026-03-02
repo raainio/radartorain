@@ -6,28 +6,29 @@
 
 *Transform weather data into actionable insights*
 
-</div>
-
 ---
 
 ### 🗺️ Roadmap
 
 Check out our development roadmap to see what features are coming next!
 
-[![Roadmap](https://img.shields.io/badge/View-Roadmap-green?style=flat-square&logo=github)](https://github.com/orgs/raainio/projects/1)
-
-### 🤝 Support
-
-We're here to help! If you don't have access to Jira, you can use this repository to ask questions or report any concerns.
-
-#### Resources
-
-- Create or follow your [issues tickets](https://github.com/raainio/radartorain/issues)
-- [Ticket Formatting Guidelines](https://github.com/raainio/radartorain/wiki/ticket-format) - Learn how to properly format your tickets
+[![Roadmap](https://img.shields.io/badge/View-Roadmap-green?style=for-the-badge&logo=trello&logoColor=white)](https://trello.com/b/pV2aNeV3/radartorain-roadmap)
 
 ---
 
-<div align="center">
+### 🟢 Status
+
+[![Statuspage](https://img.shields.io/badge/Status-Live-brightgreen?style=for-the-badge&logo=statuspage&logoColor=white)](https://radartorain.statuspage.io)
+
+---
+
+### 🤝 Support
+
+Need help? Reach out to us — en français or in english!
+
+[![Support](https://img.shields.io/badge/Request-Support-orange?style=for-the-badge&logo=jira&logoColor=white)](https://radartorain.atlassian.net/servicedesk/customer/portals)
+
+---
 
 **Made with ❤️ by the Raain.io team**
 
